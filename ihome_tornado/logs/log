@@ -1,0 +1,560 @@
+[E 171229 22:01:05 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[E 171229 22:08:19 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:09:01 web:2063] 200 GET /register.html (127.0.0.1) 5.24ms
+[I 171229 22:09:01 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 2.57ms
+[I 171229 22:09:01 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 1.22ms
+[I 171229 22:09:01 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 1.01ms
+[I 171229 22:09:01 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 1.26ms
+[I 171229 22:09:01 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.31ms
+[I 171229 22:09:01 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 1.86ms
+[I 171229 22:09:01 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.37ms
+[I 171229 22:09:01 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.53ms
+[I 171229 22:09:01 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 1.48ms
+[I 171229 22:09:01 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 1.56ms
+[I 171229 22:09:02 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 6.90ms
+[I 171229 22:09:02 web:2063] 200 GET /api/piccode?pre=&cur=41157b4b-75d9-45f3-8c31-d9ed72d30552 (127.0.0.1) 205.75ms
+[I 171229 22:09:02 web:2063] 200 GET /favicon.ico (127.0.0.1) 2.08ms
+[E 171229 22:09:19 web:1590] Uncaught exception POST /api/smscode (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='POST', uri='/api/smscode', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:8888', 'Content-Length': '93', 'Accept-Language': 'zh-CN,zh;q=0.9', 'Accept-Encoding': 'gzip, deflate, br', 'X-Xsrftoken': '2|bb7ad6e2|bf5aba775299c44b9fb53e1cc33019e5|1514556541', 'Host': '127.0.0.1:8888', 'Accept': 'application/json, text/javascript, */*; q=0.01', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Referer': 'http://127.0.0.1:8888/register.html', 'Content-Type': 'application/json', 'Cookie': 'count="2|1:0|10:1514470191|5:count|4:MTA=|764ad47ccbec0a0c1f1a8bd8cd6477d72597d16e2078c27f935136e1fd59b742"; sessionid=yc1nzf6rbikvp2ku7iurjbl8rs3kvwkq; csrftoken=viMmGbJXgQRW31azjIUJInL6XreqeBuHSNixlpQA6GWSM2By0kd3Ce3cYBSFpH0F; _xsrf=2|bb7ad6e2|bf5aba775299c44b9fb53e1cc33019e5|1514556541'})
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/home/atguigu/workspace/ihome/ihome_tornado/handlers/VerifyCode.py", line 37, in post
+        mobile = self.json_args.get('mobile')
+    AttributeError: 'SMSCodeHandler' object has no attribute 'json_args'
+[E 171229 22:09:19 web:2063] 500 POST /api/smscode (127.0.0.1) 3.79ms
+[I 171229 22:13:33 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/BaseHandler.py modified; restarting server
+[E 171229 22:13:33 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[E 171229 22:13:39 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:13:46 web:2063] 200 GET /register.html (127.0.0.1) 5.84ms
+[I 171229 22:13:46 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 2.22ms
+[I 171229 22:13:46 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 1.22ms
+[I 171229 22:13:46 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 1.02ms
+[I 171229 22:13:46 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 3.69ms
+[I 171229 22:13:46 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 1.64ms
+[I 171229 22:13:46 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.77ms
+[I 171229 22:13:46 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 2.55ms
+[I 171229 22:13:46 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.86ms
+[I 171229 22:13:46 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 1.11ms
+[I 171229 22:13:46 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 2.14ms
+[I 171229 22:13:46 web:2063] 200 GET /api/piccode?pre=&cur=f94160cd-7f11-4efe-9f88-3eae6645333f (127.0.0.1) 16.01ms
+[I 171229 22:13:46 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 4.98ms
+[E 171229 22:14:04 web:1590] Uncaught exception POST /api/smscode (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='POST', uri='/api/smscode', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:8888', 'Content-Length': '93', 'Accept-Language': 'zh-CN,zh;q=0.9', 'Accept-Encoding': 'gzip, deflate, br', 'X-Xsrftoken': '2|bb7ad6e2|bf5aba775299c44b9fb53e1cc33019e5|1514556541', 'Host': '127.0.0.1:8888', 'Accept': 'application/json, text/javascript, */*; q=0.01', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Referer': 'http://127.0.0.1:8888/register.html', 'Content-Type': 'application/json', 'Cookie': 'count="2|1:0|10:1514470191|5:count|4:MTA=|764ad47ccbec0a0c1f1a8bd8cd6477d72597d16e2078c27f935136e1fd59b742"; sessionid=yc1nzf6rbikvp2ku7iurjbl8rs3kvwkq; csrftoken=viMmGbJXgQRW31azjIUJInL6XreqeBuHSNixlpQA6GWSM2By0kd3Ce3cYBSFpH0F; _xsrf=2|bb7ad6e2|bf5aba775299c44b9fb53e1cc33019e5|1514556541'})
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/home/atguigu/workspace/ihome/ihome_tornado/handlers/VerifyCode.py", line 37, in post
+        mobile = self.json_args.get('mobile')
+    AttributeError: 'SMSCodeHandler' object has no attribute 'json_args'
+[E 171229 22:14:04 web:2063] 500 POST /api/smscode (127.0.0.1) 3.06ms
+[I 171229 22:14:47 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/VerifyCode.py modified; restarting server
+[E 171229 22:14:47 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:15:06 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/VerifyCode.py modified; restarting server
+[E 171229 22:15:06 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:15:12 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/VerifyCode.py modified; restarting server
+[E 171229 22:15:13 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[E 171229 22:15:21 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:15:25 web:2063] 200 GET /register.html (127.0.0.1) 8.09ms
+[I 171229 22:15:25 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 2.06ms
+[I 171229 22:15:25 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 2.32ms
+[I 171229 22:15:25 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 2.56ms
+[I 171229 22:15:25 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 1.87ms
+[I 171229 22:15:25 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 0.80ms
+[I 171229 22:15:25 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.09ms
+[I 171229 22:15:25 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.68ms
+[I 171229 22:15:25 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 2.93ms
+[I 171229 22:15:25 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.46ms
+[I 171229 22:15:25 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 1.84ms
+[I 171229 22:15:25 web:2063] 200 GET /api/piccode?pre=&cur=0c1340dc-62b2-47ac-94a7-2d454a4f9418 (127.0.0.1) 18.17ms
+[I 171229 22:15:25 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 5.86ms
+[E 171229 22:15:50 web:1590] Uncaught exception POST /api/smscode (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='POST', uri='/api/smscode', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:8888', 'Content-Length': '93', 'Accept-Language': 'zh-CN,zh;q=0.9', 'Accept-Encoding': 'gzip, deflate, br', 'X-Xsrftoken': '2|bb7ad6e2|bf5aba775299c44b9fb53e1cc33019e5|1514556541', 'Host': '127.0.0.1:8888', 'Accept': 'application/json, text/javascript, */*; q=0.01', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Referer': 'http://127.0.0.1:8888/register.html', 'Content-Type': 'application/json', 'Cookie': 'count="2|1:0|10:1514470191|5:count|4:MTA=|764ad47ccbec0a0c1f1a8bd8cd6477d72597d16e2078c27f935136e1fd59b742"; sessionid=yc1nzf6rbikvp2ku7iurjbl8rs3kvwkq; csrftoken=viMmGbJXgQRW31azjIUJInL6XreqeBuHSNixlpQA6GWSM2By0kd3Ce3cYBSFpH0F; _xsrf=2|bb7ad6e2|bf5aba775299c44b9fb53e1cc33019e5|1514556541'})
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/home/atguigu/workspace/ihome/ihome_tornado/handlers/VerifyCode.py", line 38, in post
+        print(self.json_args)
+    AttributeError: 'SMSCodeHandler' object has no attribute 'json_args'
+[E 171229 22:15:50 web:2063] 500 POST /api/smscode (127.0.0.1) 1.81ms
+[I 171229 22:17:46 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/BaseHandler.py modified; restarting server
+[E 171229 22:17:46 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:17:53 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/VerifyCode.py modified; restarting server
+[E 171229 22:17:53 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:18:51 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/BaseHandler.py modified; restarting server
+[E 171229 22:18:51 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[E 171229 22:19:04 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:19:08 web:2063] 200 GET /register.html (127.0.0.1) 5.64ms
+[I 171229 22:19:08 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 1.81ms
+[I 171229 22:19:08 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 1.08ms
+[I 171229 22:19:08 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 1.30ms
+[I 171229 22:19:08 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 1.31ms
+[I 171229 22:19:08 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 1.67ms
+[I 171229 22:19:08 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.93ms
+[I 171229 22:19:08 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.16ms
+[I 171229 22:19:08 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 1.09ms
+[I 171229 22:19:08 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.05ms
+[I 171229 22:19:08 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 1.55ms
+[I 171229 22:19:08 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 4.59ms
+[I 171229 22:19:08 web:2063] 200 GET /api/piccode?pre=&cur=59762ddc-aa8b-4768-85d5-fdda6449d958 (127.0.0.1) 14.19ms
+[I 171229 22:19:21 web:2063] 200 GET /api/piccode?pre=59762ddc-aa8b-4768-85d5-fdda6449d958&cur=0610a10e-77e9-4d76-9f21-afa367534f60 (127.0.0.1) 9.95ms
+[I 171229 22:19:27 web:2063] 200 POST /api/smscode (127.0.0.1) 2.88ms
+[I 171229 22:19:55 web:2063] 200 POST /api/smscode (127.0.0.1) 1.34ms
+[I 171229 22:20:26 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/Passport.py modified; restarting server
+[E 171229 22:20:26 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:20:27 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/Passport.py modified; restarting server
+[E 171229 22:20:27 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:20:52 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/Passport.py modified; restarting server
+[E 171229 22:20:52 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[E 171229 22:20:57 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:21:02 web:2063] 200 POST /api/smscode (127.0.0.1) 1.22ms
+[I 171229 22:21:03 web:2063] 200 POST /api/smscode (127.0.0.1) 0.76ms
+[I 171229 22:21:04 web:2063] 200 GET /register.html (127.0.0.1) 5.80ms
+[I 171229 22:21:04 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 2.29ms
+[I 171229 22:21:04 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 2.40ms
+[I 171229 22:21:04 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 1.27ms
+[I 171229 22:21:04 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 1.88ms
+[I 171229 22:21:04 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 2.19ms
+[I 171229 22:21:04 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.28ms
+[I 171229 22:21:04 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.16ms
+[I 171229 22:21:04 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 1.37ms
+[I 171229 22:21:04 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.42ms
+[I 171229 22:21:04 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 1.70ms
+[I 171229 22:21:04 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 3.75ms
+[I 171229 22:21:04 web:2063] 200 GET /api/piccode?pre=&cur=ada2894d-51c8-4205-8da2-895dffb40bd7 (127.0.0.1) 16.31ms
+[I 171229 22:21:12 web:2063] 200 GET /api/piccode?pre=ada2894d-51c8-4205-8da2-895dffb40bd7&cur=278ddb49-c68b-4884-b0b0-e0cb061e86de (127.0.0.1) 10.94ms
+[I 171229 22:21:13 web:2063] 200 GET /api/piccode?pre=278ddb49-c68b-4884-b0b0-e0cb061e86de&cur=3331a702-9099-46c3-8406-4faaa23ad963 (127.0.0.1) 5.91ms
+[I 171229 22:21:20 web:2063] 200 POST /api/smscode (127.0.0.1) 1.07ms
+[I 171229 22:52:05 web:2063] 200 POST /api/smscode (127.0.0.1) 1.50ms
+[I 171229 22:53:34 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/Passport.py modified; restarting server
+[E 171229 22:53:34 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:53:39 web:2063] 200 POST /api/smscode (127.0.0.1) 1.81ms
+[I 171229 22:53:52 web:2063] 200 GET /register.html (127.0.0.1) 5.75ms
+[I 171229 22:53:52 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 2.03ms
+[I 171229 22:53:52 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 2.30ms
+[I 171229 22:53:52 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 2.87ms
+[I 171229 22:53:52 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 1.62ms
+[I 171229 22:53:52 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.34ms
+[I 171229 22:53:52 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 1.60ms
+[I 171229 22:53:52 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.28ms
+[I 171229 22:53:52 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.16ms
+[I 171229 22:53:52 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 1.82ms
+[I 171229 22:53:52 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 1.31ms
+[I 171229 22:53:52 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 3.48ms
+[I 171229 22:53:52 web:2063] 200 GET /api/piccode?pre=&cur=ad24e34c-1e75-48e0-bb16-e3f6223d580b (127.0.0.1) 22.20ms
+[I 171229 22:54:07 web:2063] 200 POST /api/smscode (127.0.0.1) 1.36ms
+[E 171229 22:54:18 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:54:21 web:2063] 200 GET /register.html (127.0.0.1) 5.11ms
+[I 171229 22:54:21 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 3.25ms
+[I 171229 22:54:21 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 2.14ms
+[I 171229 22:54:21 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 3.00ms
+[I 171229 22:54:21 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 1.60ms
+[I 171229 22:54:21 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 1.09ms
+[I 171229 22:54:21 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.47ms
+[I 171229 22:54:21 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 3.43ms
+[I 171229 22:54:21 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.96ms
+[I 171229 22:54:21 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 1.29ms
+[I 171229 22:54:21 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 2.06ms
+[I 171229 22:54:21 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 3.22ms
+[I 171229 22:54:22 web:2063] 200 GET /api/piccode?pre=&cur=4e1bf3d2-ceba-41e7-ac65-3fdea8282bc1 (127.0.0.1) 17.59ms
+[I 171229 22:54:37 web:2063] 200 POST /api/smscode (127.0.0.1) 1.62ms
+[I 171229 22:55:09 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/Passport.py modified; restarting server
+[E 171229 22:55:09 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[E 171229 22:55:15 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:55:18 web:2063] 200 GET /register.html (127.0.0.1) 4.15ms
+[I 171229 22:55:18 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 1.94ms
+[I 171229 22:55:18 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 1.43ms
+[I 171229 22:55:18 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 1.62ms
+[I 171229 22:55:18 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 0.86ms
+[I 171229 22:55:18 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 0.85ms
+[I 171229 22:55:18 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 3.27ms
+[I 171229 22:55:18 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.53ms
+[I 171229 22:55:18 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 2.30ms
+[I 171229 22:55:18 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 1.55ms
+[I 171229 22:55:18 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 3.51ms
+[I 171229 22:55:18 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 4.73ms
+[I 171229 22:55:18 web:2063] 200 GET /api/piccode?pre=&cur=79e042a7-945b-45b2-ba02-0c42e891e0a3 (127.0.0.1) 20.08ms
+[I 171229 22:55:27 web:2063] 200 GET /api/piccode?pre=79e042a7-945b-45b2-ba02-0c42e891e0a3&cur=f42cc3ec-51bb-47e6-abb6-b2aa2e0c484f (127.0.0.1) 7.05ms
+[I 171229 22:55:35 web:2063] 200 POST /api/smscode (127.0.0.1) 2.18ms
+[I 171229 22:56:33 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/Passport.py modified; restarting server
+[E 171229 22:56:34 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[E 171229 22:56:37 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:56:42 web:2063] 200 GET /register.html (127.0.0.1) 5.17ms
+[I 171229 22:56:42 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 2.29ms
+[I 171229 22:56:42 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 1.44ms
+[I 171229 22:56:42 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 1.76ms
+[I 171229 22:56:42 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.48ms
+[I 171229 22:56:42 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 1.83ms
+[I 171229 22:56:42 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 2.11ms
+[I 171229 22:56:42 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.77ms
+[I 171229 22:56:42 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 2.23ms
+[I 171229 22:56:42 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.29ms
+[I 171229 22:56:42 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 1.46ms
+[I 171229 22:56:42 web:2063] 200 GET /api/piccode?pre=&cur=8dedaa94-d852-4519-b40a-0844d3c91c03 (127.0.0.1) 25.47ms
+[I 171229 22:56:42 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 5.16ms
+[I 171229 22:56:42 web:2063] 200 GET /register.html (127.0.0.1) 1.27ms
+[I 171229 22:56:42 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 1.62ms
+[I 171229 22:56:42 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 1.20ms
+[I 171229 22:56:42 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 2.20ms
+[I 171229 22:56:42 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.09ms
+[I 171229 22:56:42 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 2.37ms
+[I 171229 22:56:42 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 1.59ms
+[I 171229 22:56:42 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.43ms
+[I 171229 22:56:42 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.08ms
+[I 171229 22:56:42 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 1.81ms
+[I 171229 22:56:42 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 1.65ms
+[I 171229 22:56:42 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 4.03ms
+[I 171229 22:56:42 web:2063] 200 GET /api/piccode?pre=&cur=fa34fed1-6b0f-4449-86aa-e89154167561 (127.0.0.1) 9.73ms
+[I 171229 22:57:10 web:2063] 200 POST /api/smscode (127.0.0.1) 2.16ms
+[I 171229 22:58:15 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/VerifyCode.py modified; restarting server
+[E 171229 22:58:16 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[E 171229 22:58:22 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171229 22:58:26 web:2063] 200 GET /register.html (127.0.0.1) 4.89ms
+[I 171229 22:58:26 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 2.97ms
+[I 171229 22:58:26 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 1.79ms
+[I 171229 22:58:26 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.93ms
+[I 171229 22:58:26 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 3.27ms
+[I 171229 22:58:26 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 2.79ms
+[I 171229 22:58:26 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 1.12ms
+[I 171229 22:58:26 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.26ms
+[I 171229 22:58:26 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 1.24ms
+[I 171229 22:58:26 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.17ms
+[I 171229 22:58:26 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 2.45ms
+[I 171229 22:58:26 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 4.66ms
+[I 171229 22:58:26 web:2063] 200 GET /api/piccode?pre=&cur=0150d2cf-0cf5-45e0-b52d-12f07c3b4959 (127.0.0.1) 21.92ms
+[I 171229 22:58:38 web:2063] 200 POST /api/smscode (127.0.0.1) 2.01ms
+[I 171229 22:58:38 web:2063] 200 GET /api/piccode?pre=0150d2cf-0cf5-45e0-b52d-12f07c3b4959&cur=548a399f-5961-4756-b210-b70ef466a7a6 (127.0.0.1) 7.28ms
+[I 171229 22:58:44 web:2063] 200 GET /api/piccode?pre=548a399f-5961-4756-b210-b70ef466a7a6&cur=9d72604f-7b36-4e33-a4ef-be3f22f0b9b4 (127.0.0.1) 8.15ms
+[I 171229 22:58:53 web:2063] 200 POST /api/smscode (127.0.0.1) 1.67ms
+[I 171229 22:58:54 web:2063] 200 GET /api/piccode?pre=9d72604f-7b36-4e33-a4ef-be3f22f0b9b4&cur=9e9683e6-1b1f-4674-b324-09da1cc371cc (127.0.0.1) 8.83ms
+[E 171231 09:56:49 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171231 09:57:15 web:2063] 304 GET /register.html (127.0.0.1) 135.38ms
+[I 171231 09:57:15 web:2063] 304 GET /static/css/ihome/register.css (127.0.0.1) 90.04ms
+[I 171231 09:57:15 web:2063] 304 GET /static/css/reset.css (127.0.0.1) 1.66ms
+[I 171231 09:57:15 web:2063] 304 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 63.15ms
+[I 171231 09:57:15 web:2063] 304 GET /static/css/ihome/main.css (127.0.0.1) 38.24ms
+[I 171231 09:57:16 web:2063] 304 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 124.55ms
+[I 171231 09:57:16 web:2063] 304 GET /static/images/logo@128x59.png (127.0.0.1) 66.43ms
+[I 171231 09:57:16 web:2063] 304 GET /static/js/jquery.min.js (127.0.0.1) 19.61ms
+[I 171231 09:57:16 web:2063] 304 GET /static/js/ihome/register.js (127.0.0.1) 18.21ms
+[I 171231 09:57:16 web:2063] 304 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 7.00ms
+[I 171231 09:57:16 web:2063] 200 GET /api/piccode?pre=&cur=879c6ed3-e2e1-4999-9be2-e992aed476e8 (127.0.0.1) 260.40ms
+[I 171231 09:57:33 web:2063] 200 POST /api/smscode (127.0.0.1) 1.59ms
+[I 171231 09:57:33 web:2063] 200 GET /api/piccode?pre=879c6ed3-e2e1-4999-9be2-e992aed476e8&cur=43a88bb0-de60-40b3-900a-ed4dc26d057c (127.0.0.1) 8.67ms
+[I 171231 09:58:40 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/VerifyCode.py modified; restarting server
+[E 171231 09:58:41 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171231 09:59:16 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/Passport.py modified; restarting server
+[E 171231 09:59:16 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171231 09:59:23 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/Passport.py modified; restarting server
+[E 171231 09:59:23 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171231 09:59:30 web:2063] 304 GET /register.html (127.0.0.1) 3.55ms
+[I 171231 09:59:30 web:2063] 200 GET /api/piccode?pre=&cur=5cac0925-5027-4ad9-bb8b-b0ead5ec499a (127.0.0.1) 15.70ms
+[I 171231 09:59:30 web:2063] 200 GET /favicon.ico (127.0.0.1) 37.81ms
+[I 171231 09:59:51 web:2063] 200 POST /api/smscode (127.0.0.1) 1.26ms
+[I 171231 09:59:51 web:2063] 200 GET /api/piccode?pre=5cac0925-5027-4ad9-bb8b-b0ead5ec499a&cur=3f1db003-2da4-435b-bf0d-7b4e0e8a5923 (127.0.0.1) 9.42ms
+[I 171231 10:01:01 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/VerifyCode.py modified; restarting server
+[E 171231 10:01:01 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171231 10:10:19 autoreload:198] /home/atguigu/workspace/ihome/ihome_tornado/handlers/BaseHandler.py modified; restarting server
+[E 171231 10:10:20 torndb:103] Cannot connect to MySQL on 127.0.0.1
+    Traceback (most recent call last):
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 100, in __init__
+        self.reconnect()
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/torndb.py", line 117, in reconnect
+        self._db = MySQLdb.connect(**self._db_args)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+        return Connection(*args, **kwargs)
+      File "/home/atguigu/.virtualenvs/py2/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+    OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+[I 171231 11:07:16 web:2063] 200 POST /api/smscode (127.0.0.1) 2.21ms
+[I 171231 11:07:16 web:2063] 200 GET /api/piccode?pre=3f1db003-2da4-435b-bf0d-7b4e0e8a5923&cur=36ec65fa-ada9-4cd0-aec4-9ec3f2da197c (127.0.0.1) 17.96ms
